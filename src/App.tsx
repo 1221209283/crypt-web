@@ -9,6 +9,12 @@ function App_Header() {
   )
 }
 
+function App_Footer() {
+  return (
+    <></>
+  )
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
