@@ -1,6 +1,6 @@
-import './App.css'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import reactLogo from '@/src/assets/react.svg'
+import { Button } from "@/components/ui/button.tsx" // shadcn
 
 function App_Header() {
   return (
@@ -10,7 +10,7 @@ function App_Header() {
   )
 }
 
-function App_Footer() {
+function _App_Footer() {
   return (
     <></>
   )
@@ -22,6 +22,7 @@ function App() {
   return (
     <>
       <App_Header/>
+      <Button className="cursor-pointer animate-bounce direction-normal" variant="default">Powered By Shadcn</Button>
       <img src="/vite-deno.svg" alt="Vite with Deno" />
       <div>
         <a href="https://vite.dev" target="_blank">
