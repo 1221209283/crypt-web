@@ -4,7 +4,8 @@ import reactLogo from './assets/react.svg'
 
 function App_Header() {
   return (
-    <header className="red">
+    <header className="rounded-full bg-pink-500 h-[100px] flex place-content-center shadow-lg shadow-pink-500/50">
+      <h1 className="font-serif self-center text-stone-50">Tailwind Css</h1>
     </header>
   )
 }
