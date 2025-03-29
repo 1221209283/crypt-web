@@ -1,5 +1,5 @@
 import { ReactNode, useRef, useState } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router"
 import { Button } from "@/components/ui/button.tsx" // shadcn
 
 function App_Header() {
@@ -26,10 +26,24 @@ function App_Footer() {
 }
 
 function Index() {
+  const [htmltext, setHtmltext] = useState("");
+  const encoder = new TextEncoder();
+  const data = encoder.encode("test");
+  const hash = globalThis.crypto.subtle.digest("SHA-256", data);
+  hash.then((value) => {
+    const hashArray = Array.from(new Uint8Array(value));
+    const hashHex = hashArray
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
+    setHtmltext(hashHex);
+  });
+  // https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms
   return (
-    <p>
-    Index Page
-    </p>
+    <>
+      <p>Index Page</p>
+      <p>crypto Testing: SHA-256 Hash</p>
+      <p>test -{'>'} {htmltext}</p>
+    </>
   )
 }
 
