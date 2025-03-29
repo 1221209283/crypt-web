@@ -3,7 +3,7 @@ import * as animate from "tailwindcss-animate";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-    darkMode: ["class"],
+    darkMode: "media",
     content: [
         "{routes,islands,components}/**/*.{ts,tsx,js,jsx}",
     ],
