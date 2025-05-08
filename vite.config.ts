@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [deno(), react(),tailwindcss()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./"),
+      "@": path.resolve(__dirname, './'),
     },
   },
 })
